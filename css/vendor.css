@@ -1100,7 +1100,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 .chocolat-wrapper .chocolat-pagination {
-  float: right;
+  /* float: right; */
   display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
