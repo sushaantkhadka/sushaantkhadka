@@ -1,51 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Color Example</title>
+    <title>Floating Alphabets</title>
+    <link rel="stylesheet" type="text/css" href="css/whitemode.css">
     <style>
-        :root {
-    --global-color: #FF5733; /* Define the global color variable */
-}
-
-.box {
-    background-color: var(--global-color); /* Use the global color variable */
-    color: white;
-    padding: 20px;
-    margin: 10px;
-}
-
-    </style>
-</head>
-<body>
-    <div class="box">Box 1</div>
-    <div class="box">Box 2</div>
-    <div class="box">Box 3</div>
-
-    <button id="changeColorButton">Change Color</button>
-
-    <script>
-
-document.addEventListener('DOMContentLoaded', function() {
-    const changeColorButton = document.getElementById('changeColorButton');
-
-    changeColorButton.addEventListener('click', function() {
-        const newColor = getRandomColor();
-        document.documentElement.style.setProperty('--global-color', newColor);
-    });
-
-    // Function to generate a random color
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
+        body{
+            background-color: greenyellow;
         }
-        return color;
-    }
-});
 
-    </script>
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="canvasWhite"></div>
+
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+
+    <script src="js/notes/app.js" type="module"></script>
+
 </body>
+
 </html>

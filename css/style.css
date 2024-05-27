@@ -23,6 +23,13 @@
 
 }
 
+#canvasWhite {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 /* Default light mode styles */
 body {
   background: #f5f3eb;
@@ -38,7 +45,7 @@ body.dark-mode {
 
 /* topnav  */
 .topnav {
-  margin: 10px;
+  margin: 5px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -53,6 +60,7 @@ body.dark-mode {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin-top: -30px;
 }
 
 .profile-card {
@@ -70,11 +78,33 @@ body.dark-mode {
   color: white;
 }
 
+.profile-card img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--global-color);
+  box-shadow: 0 0 25px var(--global-color);
+  cursor: pointer;
+  transition: 0.3 ease;
+}
+
+.profile-card img:hover {
+  box-shadow: 0 0 25px var(--global-color),
+              0 0 50px var(--global-color),
+              0 0 100px var(--global-color);
+}
+
+.profile-card .numbers-grid{
+  margin-top: -30px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2em;
+
+}
+
 .profile-card .btn-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
   gap: 1em;
 }
 
@@ -98,7 +128,7 @@ body.dark-mode {
   border: 2px solid var(--global-color);
   color: var(--global-color);
   box-shadow: 0 0 25px var(--global-color),
-    0 0 10px var(--global-color);
+              0 0 10px var(--global-color);
 }
 
 .btn-box .message {
@@ -106,8 +136,19 @@ body.dark-mode {
   border: 2px solid var(--global-color);
   color: var(--global-color);
   box-shadow: 0 0 25ox var(--global-color),
-    inset 0 0 10px var(--global-color);
+              inset 0 0 10px var(--global-color);
 }
+
+.numbers-grid .box p:first-child{
+  font-weight: 800;
+}
+
+.numbers-grid .box p:last-child{
+  margin-top: -20px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
 
 .info-box {
   display: flex;
@@ -121,35 +162,13 @@ body.dark-mode {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-top: 1.5em;
+  margin-top: -10px;
 }
 
-.info h2{
-  font-size: large;
-  font-weight: bold;
-}
 
 .info p {
+  margin-top: -20px;
   color: var(--global-color);
-}
-
-
-
-
-
-.profile-card img {
-  width: 150px;
-  border-radius: 50%;
-  border: 3px solid var(--global-color);
-  box-shadow: 0 0 25px var(--global-color);
-  cursor: pointer;
-  transition: 0.3 ease;
-}
-
-.profile-card img-hover {
-  box-shadow: 0 0 25px var(--global-color),
-    0 0 25px var(--global-color),
-    0 0 100px var(--global-color);
 }
 
 
@@ -162,15 +181,9 @@ body.dark-mode {
   font-size: 1em;
   padding: 1px;
   color: white;
+  padding: 10px;
   cursor: pointer;
   transition: 0.4s ease-in-out;
-}
-
-.info-box .icons {
-  margin-top: 1em;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
 }
 
 

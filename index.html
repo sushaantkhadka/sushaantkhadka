@@ -11,19 +11,19 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/themeMode.css">
+    <link rel="stylesheet" type="text/css" href="css/whitemode.css">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-
+    <canvas id="canvasWhite"></canvas>
     <canvas id="canvas"></canvas>
-
-
+    
     <div class="topnav">
 
         <audio id="myAudio" loop>
-            <source src="theme.mp3" type="audio/mpeg">
+            <source src="static/music/soft.mp3" type="audio/mpeg">
         </audio>
 
         <div class="themeMode">
@@ -54,26 +54,41 @@
 
                 <div class="icons">
                     <a href="instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
-                    <a href="linkedin.com" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
-                    <a href="github.com" target="_blank"><i class='bx bxl-github' ></i></a>
-                    <a href="behance.com" target="_blank"><i class='bx bxl-behance' ></i></a>
-                    <a href="twitter.com" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="linkedin.com" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="github.com" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="behance.com" target="_blank"><i class='bx bxl-behance'></i></a>
+                    <a href="twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
-            
+            <div class="numbers-grid">
+                <div class="box" id="projects">
+                    <p>99k</p>
+                    <p>Ideas</p>
+                </div>
+
+                <div class="box" id="projects">
+                    <p>1k</p>
+                    <p>Noted</p>
+                </div>
+
+                <div class="box" id="projects">
+                    <p>9</p>
+                    <p>Executed</p>
+                </div>
+            </div>
 
             <div class="btn-box">
                 <button class="resume">Resume</button>
                 <button class="message">Message</button>
             </div>
-
         </div>
     </div>
 
-    
 
-    <script defer src="js/app.js" type="module"></script>
+
+    <script defer src="js/matrix/app.js" type="module"></script>
+    <script src="js/notes/run.js" type="module"></script>
     <script src="js/script.js"></script>
 
 </body>
