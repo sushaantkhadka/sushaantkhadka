@@ -1,134 +1,58 @@
-(function($) {
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('check');
+    const background = document.getElementById('canvas')
+    const body = document.body;
 
-	"use strict";
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+        toggleButton.checked = true;
+        background.style.display = 'flex';
+        document.documentElement.style.setProperty('--global-color', '#00f73f');
+        document.getElementById('designation').innerHTML="Frontend Dev"
 
-    // init Chocolat light box
-    var initChocolat = function() {
-    Chocolat(document.querySelectorAll('.image-link'), {
-      imageSize: 'contain',
-      loop: true,
-    })
     }
-      
-    
-    $(document).ready(function () {
 
-        /* Demo purposes only */
-        $(".hover").mouseleave(
-            function () {
-            $(this).removeClass("hover");
-            }
-        );
-
-        var swiper = new Swiper(".testimonial-swiper", {
-            slidesPerView: 2,
-            spaceBetween: 40,
-            breakpoints: {
-
-                390:{
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-
-                450:{
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-        
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
-                1024: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
-              }
-              
-
-        });
-
-        
-        // Animate on Scroll
-        AOS.init({
-        duration: 600,
-        once: true,
-        })
-
-
-       
-        window.addEventListener("load", (event) => {
-           //isotope
-        $('.isotope-container').isotope({
-          // options
-          itemSelector: '.item',
-          layoutMode: 'masonry'
-          });
-  
-          
-  
-          // Initialize Isotope
-          var $container = $('.isotope-container').isotope({
-              // options
-              itemSelector: '.item',
-              layoutMode: 'masonry'
-          });
-  
-          $(document).ready(function() {
-              //active button
-          $('.filter-button').click(function() {
-              $('.filter-button').removeClass('active');
-              $(this).addClass('active');
-              });
-          });
-          
-          // Filter items on button click
-          $('.filter-button').click(function() {
-          var filterValue = $(this).attr('data-filter');
-          if (filterValue === '*') {
-          // Show all items
-          $container.isotope({ filter: '*' });
-          } else {
-          // Show filtered items
-          $container.isotope({ filter: filterValue });
-          }
-          });
-  
-        });
-
-
-        initChocolat();
-		
+    toggleButton.addEventListener('change', function() {
+        if (toggleButton.checked) {
+            body.classList.add('dark-mode');
+            background.style.display = 'flex';
+            document.documentElement.style.setProperty('--global-color', '#00f73f');
+            document.getElementById('designation').innerHTML="Frontend Dev"
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            body.classList.remove('dark-mode');
+            background.style.display = 'none';
+            document.documentElement.style.setProperty('--global-color', '#FF5733');
+            document.getElementById('designation').innerHTML="UiUx Designer"
+            localStorage.setItem('darkMode', 'disabled');
+        }
     });
- 
 
 
-})(jQuery);
 
 
-const handleSubmit = (event) => {
-  event.preventDefault();
+    const musicPlay = document.getElementById('checkboxInput');
+    const audio = document.getElementById('myAudio');
 
-  const myForm = event.target;
-  const formData = new FormData(myForm);
-  
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
-};
+    if (localStorage.getItem('musicPlaying') === 'false') {
+        musicPlay.checked = true;
+        audio.pause()
+    }else{
+        audio.play();
+    }
 
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
+
+    musicPlay.addEventListener('change', function() {
+        if (musicPlay.checked) {
+            audio.pause();
+            localStorage.setItem('musicPlaying', 'false');
+        } else {
+            audio.play();
+            localStorage.setItem('musicPlaying', 'true');
+        }
+    });
+
+});
 
 
 
