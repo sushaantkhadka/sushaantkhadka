@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('check');
     const background = document.getElementById('canvas');
-    const background2 = document.getElementById('canvasWhite');
+    const backgroundWhite = document.getElementById('canvasWhite');
     const audio = document.getElementById('myAudio');
     const body = document.body;
 
     function enableDarkMode() {
         body.classList.add('dark-mode');
         background.style.display = 'flex';
-        background2.style.display = 'flex';
+        backgroundWhite.style.display = 'none';
         document.getElementById('designation').innerHTML = "Frontend Dev";
         document.getElementById('frontend').style.display = 'flex';
         document.getElementById('uiux').style.display = 'none';
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function disableDarkMode() {
         body.classList.remove('dark-mode');
         background.style.display = 'none';
-        background2.style.display = 'none';
+        backgroundWhite.style.display = 'flex';
         document.getElementById('designation').innerHTML = "UiUx Designer";
         document.getElementById('uiux').style.display = 'flex';
         document.getElementById('frontend').style.display = 'none';
