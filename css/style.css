@@ -2,7 +2,7 @@
   --light-mode-color: #FF5733; /* Define color for light mode */
   --dark-mode-color: #00f73f;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  
   
 }
 
@@ -12,6 +12,7 @@ body {
   color: #171717;
   --global-color: var(--light-mode-color); /* Set global color for light mode */
   --color: black;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Dark mode styles */
@@ -20,6 +21,7 @@ body.dark-mode {
   color: #f5f3eb;
   --global-color: var(--dark-mode-color); /* Set global color for dark mode */
   --color: white;
+  font-family: 'Kode Mono', monospace;
 }
 
 #canvas {
