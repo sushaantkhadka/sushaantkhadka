@@ -2,4 +2,6 @@
 
 [![Sushant's GitHub stats](https://github-readme-stats.vercel.app/api?username=sushaantkhadka)](https://github.com/sushaantkhadka/github-readme-stats)
 
-[https://raw.githubusercontent.com/sushaantkhadka/sushaantkhadka/output/snake.svg](https://raw.githubusercontent.com/sushaantkhadka/sushaantkhadka/output/snake.svg)
+[![#SHHH]](https://raw.githubusercontent.com/sushaantkhadka/sushaantkhadka/output/snake.svg)
+
+![snake gif](https://raw.githubusercontent.com/sushaantkhadka/sushaantkhadka/output/snake.svg)
