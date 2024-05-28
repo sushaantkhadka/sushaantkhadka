@@ -6,12 +6,20 @@
   
 }
 
-.light-mode {
+/* Default light mode styles */
+body {
+  background: #f5f3eb;
+  color: #171717;
   --global-color: var(--light-mode-color); /* Set global color for light mode */
+  --color: black;
 }
 
-.dark-mode {
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #171717;
+  color: #f5f3eb;
   --global-color: var(--dark-mode-color); /* Set global color for dark mode */
+  --color: white;
 }
 
 #canvas {
@@ -30,17 +38,7 @@
   height: 100%;
 }
 
-/* Default light mode styles */
-body {
-  background: #f5f3eb;
-  color: #171717;
-}
 
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #171717;
-  color: #f5f3eb;
-}
 
 
 /* topnav  */
@@ -139,6 +137,10 @@ body.dark-mode {
               inset 0 0 10px var(--global-color);
 }
 
+.numbers-grid{
+  color: var(--color);
+}
+
 .numbers-grid .box p:first-child{
   font-weight: 800;
 }
@@ -165,6 +167,9 @@ body.dark-mode {
   margin-top: -10px;
 }
 
+.info h2{
+  color: var(--color);
+}
 
 .info p {
   margin-top: -20px;
@@ -180,7 +185,7 @@ body.dark-mode {
 .info-box .icons i {
   font-size: 1em;
   padding: 1px;
-  color: white;
+  color: var(--color);
   padding: 10px;
   cursor: pointer;
   transition: 0.4s ease-in-out;
