@@ -152,6 +152,14 @@ body.dark-mode {
   opacity: 0.8;
 }
 
+#uiux{
+  display: none;
+}
+
+#frontend{
+  display: none;
+}
+
 
 .info-box {
   display: flex;

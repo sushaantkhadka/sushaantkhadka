@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('canvasWhite');
-    const alphabet = '♩♪♫♬♭';
+    const alphabet = '♩♪♫♬♭$♦️♣️☘️♠️';  
 
     function createFloatingLetter(letter) {
         const span = document.createElement('span');
