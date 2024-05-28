@@ -59,6 +59,7 @@ body.dark-mode {
   justify-content: center;
   height: 100vh;
   margin-top: -60px;
+  color: var(--color);
 }
 
 .profile-card {
@@ -204,3 +205,54 @@ body.dark-mode {
 .info-box .icons i:hover {
   color: var(--global-color);
 }
+
+
+/* github chart */
+.gitCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  padding: 2em 2.5em;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+}
+
+.gitCard button {
+  padding: 0px 25px;
+  font-size: 16px;
+  border-radius: 1em;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.gitCard .github{
+  background-color: var(--global-color);
+  box-shadow: 0 0 var(--global-color);
+  color: #171717;
+}
+
+.gitCard .github:hover {
+  background-color: transparent;
+  border: 2px solid var(--global-color);
+  color: var(--global-color);
+  box-shadow: 0 0 25px var(--global-color),
+              0 0 10px var(--global-color);
+}
+
+
+/* project card  */
+.projectCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  padding: 2em 2.5em;
+
+}
+

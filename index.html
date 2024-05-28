@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/themeMode.css">
     <link rel="stylesheet" type="text/css" href="css/whitemode.css">
+    <link rel="stylesheet" type="text/css" href="css/floatingCard.css">
+
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -97,23 +99,51 @@
 
             <!-- buttons and link  -->
             <div class="btn-box">
-                <a id="resumeLink" href="" download="Sushant_khadka_cv"><button
-                        class="resume">Resume</button>
+                <a id="resumeLink" href="" download="Sushant_khadka_cv"><button class="resume">Resume</button>
                 </a>
                 <button class="message">Message</button>
             </div>
         </div>
     </div>
 
+    <div class="card">
+        <div class="gitCard " id="gitCard">
+            <h1>Github Contribution of last year</h1>
+            <img class="my-4" src="https://raw.githubusercontent.com/sushaantkhadka/sushaantkhadka/output/snake.svg"
+                alt="">
 
-    <div class="py-4 my-4 ">
-        <h1 class="fw-bold">My Git</h1>
-        <img class="my-4" src="https://ghchart.rshah.org/sushaantkhadka" alt="">
+            <a href="https://github.com/sushaantkhadka" target="_blank"><button class="github">VISIT MY GITHUB</button>
+            </a>
+        </div>
 
-        <a href="https://github.com/sushaantkhadka" target="_blank">VISIT MY GITHUB</a>
+
+        <div class="projectCard" id="projectCard">
+            <h1>My Projects</h1>
+
+            <div class="floatingCard" id="floatingCard">
+                <div data-text="Github" style="--r:-15;" class="glass">
+                    <div class="cardicon">
+                        <i class='bx bxs-shopping-bags'></i>
+                    </div>
+                </div>
+                <div data-text="Code" style="--r:5;" class="glass">
+                    <div class="cardicon">
+                        <i class='bx bxs-pen'></i>
+                    </div>
+                </div>
+                <div data-text="Earn" style="--r:25;" class="glass">
+                    <div class="cardicon">
+                        <i class='bx bxs-pen'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    
+
+
+
     <script defer src="js/matrix/app.js" type="module"></script>
     <script src="js/notes/run.js" type="module"></script>
     <script src="js/script.js"></script>
