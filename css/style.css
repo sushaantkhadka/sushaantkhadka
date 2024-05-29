@@ -17,7 +17,7 @@ body {
 
 /* Dark mode styles */
 body.dark-mode {
-  background-color: #171717;
+  background-color: #030908;
   color: #f5f3eb;
   --global-color: var(--dark-mode-color); /* Set global color for dark mode */
   --color: white;
