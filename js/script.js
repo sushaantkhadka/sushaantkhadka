@@ -4,13 +4,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const background = document.getElementById('canvas');
     const backgroundWhite = document.getElementById('canvasWhite');
 
-    const resumeLink = document.getElementById('resumeLink');
     const audio = document.getElementById('myAudio');
+
+    const clickButton = document.getElementById('landingButton')
 
 
     const body = document.body;
 
 
+    clickButton.addEventListener('click', function () {
+        const landing = document.getElementById('landing');
+        const container = document.getElementById('container');
+
+        landing.style.display = 'none';
+        container.style.display = 'block';
+    });
 
     function enableDarkMode() {
         body.classList.add('dark-mode');
@@ -57,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Event listener for the toggle button
-    toggleButton.addEventListener('change', function() {
+    toggleButton.addEventListener('change', function () {
         if (toggleButton.checked) {
             enableDarkMode();
             localStorage.setItem('darkMode', 'enabled');
@@ -67,3 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+

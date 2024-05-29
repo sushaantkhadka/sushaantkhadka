@@ -24,6 +24,15 @@ body.dark-mode {
   font-family: 'Kode Mono', monospace;
 }
 
+.landing{
+  display: flex;
+}
+
+.container{
+  display: none;
+}
+
+
 #canvas {
   display: none;
   position: absolute; /* Use absolute or relative positioning */
