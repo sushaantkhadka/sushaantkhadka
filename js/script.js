@@ -12,16 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    // different cv in different designation 
-    const uiResume = "images/Portfolio/Sushant_khadka_cv.pdf";
-    const frontendResume = 'images/uiux.png';
-
-    function updateResumeLink(href) {
-        resumeLink.href = href;
-    }
-
-
-
     function enableDarkMode() {
         body.classList.add('dark-mode');
 
@@ -38,8 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('uiux').style.display = 'none';
         audio.src = 'static/music/rock.mp3';
         audio.play();
-
-        updateResumeLink(frontendResume);
     }
 
     function disableDarkMode() {
@@ -57,8 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('frontend').style.display = 'none';
         audio.src = 'static/music/soft.mp3';
         audio.play();
-
-        updateResumeLink(uiResume);
     }
 
     // Load dark mode state from localStorage and apply it
