@@ -13,12 +13,76 @@
 
     <style>
 
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            border: 1px solid black;
+        }
+
+        .container{
+            scroll-snap-type: y mandatory;
+            overflow: scroll;
+            overflow-x: hidden;
+            height: 100vh;
+        }
+
+        section{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+
+        h1{
+            color: white;
+        }
+
+        .one{
+            background: red;
+        }
+
+        
+        .two{
+            background: black;
+        }
+
+        
+        .three{
+            background: blue;
+        }
+
+        
+        .four{
+            background: green;
+        }
         
     </style>
 
 </head>
 
 <body>
+
+    <div class="container">
+        <section class="one">
+            <h1>This is First Page</h1>
+        </section>
+
+        <section class="two">
+            <h1>This is First Page</h1>
+        </section>
+
+        <section class="three">
+            <h1>This is First Page</h1>
+        </section>
+
+        <section class="four">
+            <h1>This is First Page</h1>
+        </section>
+    </div>
     
 
 </body>
