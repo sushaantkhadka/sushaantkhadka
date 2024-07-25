@@ -19,9 +19,10 @@ export default function ProfileCard({theme}) {
             <div className={theme? "profile-card-dark" : "profile-card"}>
             <Image
               src="/image/sushantprofile.png"
-              alt="Your Image"
-              width={100}
-              height={100}
+              alt="sushant's profile picture"
+              width={500}
+              height={500}
+              loading="lazy"
               className={`rounded-full border-3 ${theme? "border-green-500" : "border-orange-500"} hover:shadow-profile-hover cursor-pointer transition duration-300 ease-in-out`}
             />
             </div>
