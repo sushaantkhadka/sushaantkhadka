@@ -95,7 +95,7 @@ export default function MatrixEffect() {
     };
   }, []);
 
-  return <canvas id="canvas" className="absolute mt-[-15px]"></canvas>;
+  return <canvas id="canvas" className="absolute z-0 mt-[-15px]"></canvas>;
 }
 
 // Effects

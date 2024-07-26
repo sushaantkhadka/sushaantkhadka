@@ -1,7 +1,7 @@
 import React from 'react'
 import Uiux from './portfolioCard/Uiux'
 
-export default function LightMode({theme}) {
+export default function LightMode({}) {
 
   const portfolios = [
     {
