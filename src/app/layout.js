@@ -30,7 +30,7 @@ export const metadata = {
     {
       name: "keywords",
       content:
-        "HTML, CSS, JavaScript,next.js, react, Portfolio, Sushant Khadka, animation, particles, constellation, frontend, chatgpt, cool, website",
+        "HTML, CSS, JavaScript, next.js, next14, uiux, user interface design, UX, UI, react, Portfolio, Sushant Khadka, animation, particles, constellation, frontend, chatgpt, cool, website",
     },
     { name: "author", content: "Sushant Khadka" },
     { charset: "UTF-8" },
