@@ -14,23 +14,30 @@ export const metadata = {
       type: "image/png",
     },
     description: "Project by Sushant Khadka",
-    url: "",  // Add your URL here
+    url: "", // Add your URL here
     type: "website",
   },
   twitter: {
     card: "summary",
   },
   meta: [
-    { name: "description", content: "I'm the Michelangelo of graphics, chiseling visuals that leap out of the screen and dance a tango with your eyeballs. Logos, icons, illustrations – you name it, I'll make it so captivating that even Picasso would be jealous. Click to visit website." },
+    {
+      name: "description",
+      content:
+        "I'm the Michelangelo of graphics, chiseling visuals that leap out of the screen and dance a tango with your eyeballs. Logos, icons, illustrations – you name it, I'll make it so captivating that even Picasso would be jealous. Click to visit website.",
+    },
     { name: "theme-color", content: "#000000" },
-    { name: "keywords", content: "HTML, CSS, JavaScript,next.js, react, Portfolio, Sushant Khadka, animation, particles, constellation, frontend, chatgpt, cool, website" },
+    {
+      name: "keywords",
+      content:
+        "HTML, CSS, JavaScript,next.js, react, Portfolio, Sushant Khadka, animation, particles, constellation, frontend, chatgpt, cool, website",
+    },
     { name: "author", content: "Sushant Khadka" },
     { charset: "UTF-8" },
     { httpEquiv: "X-UA-Compatible", content: "IE=edge" },
     { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-  ]
+  ],
 };
-
 
 export default function RootLayout({ children }) {
   return (
