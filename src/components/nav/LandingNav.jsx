@@ -16,8 +16,8 @@ const LandingNav = ({ theme }) => {
   return (
     <>
       <div className="hidden absolute right-0 md:flex justify-end align-top gap-10 mt-[2px] mr-10">
-        {navList.map((nav) => (
-          <Link href={nav.link}>
+        {navList.map((nav, navIndex) => (
+          <Link href={nav.link} key={navIndex}>
             <p
               className={`${
                 theme

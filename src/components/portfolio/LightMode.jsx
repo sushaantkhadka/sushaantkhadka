@@ -44,7 +44,7 @@ export default function LightMode({}) {
   return (
     <div>
        {portfolios.map((portfolio, index) => (
-        <Uiux portfolio={portfolio} index={index} />
+        <Uiux portfolio={portfolio} index={index} key={index} />
        ))}
     </div>
   )
