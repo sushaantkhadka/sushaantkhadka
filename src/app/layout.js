@@ -28,10 +28,7 @@ export const metadata = {
     { charset: "UTF-8" },
     { httpEquiv: "X-UA-Compatible", content: "IE=edge" },
     { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-  ],
-  // link: [
-  //   { rel: "icon", href: "/image/Logo/logo2.ico" },
-  // ],
+  ]
 };
 
 
