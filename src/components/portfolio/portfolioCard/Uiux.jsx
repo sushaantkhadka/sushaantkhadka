@@ -2,22 +2,22 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Uiux(portfolio, index) {
+export default function Uiux(portfolio) {
   const data = portfolio;
   const filterClass = data.portfolio.catagories.join(" ");
   // console.log(filterClass)
   return (
     <div
       className={`flex flex-col justify-center align-top pb-5 ${filterClass}`}
-      key={index}
     >
       <div className="m-5 w-[320px] md:w-[750px] md:h-[250px] flex flex-col md:flex-row gap-5">
         <div className=" relative mx-auto h-auto overflow-hidden rounded-lg shadow-md">
           <Image
             src={data.portfolio.image}
             alt="Akriti Portfolio"
-            width={100}
-            height={100}
+            width={400}
+            height={250}
+            priority
             className="h-200px md:h-[250px] w-[400px] object-cover opacity-100 rounded-lg transition-all duration-300 ease-in-out hover:opacity-80 hover:scale-110"
             />
         </div>
