@@ -22,6 +22,7 @@ export default function ProfileCard({theme}) {
               alt="sushant's profile picture"
               width={500}
               height={500}
+              priority
               className={`rounded-full border-3 ${theme? "border-green-500" : "border-orange-500"} hover:shadow-profile-hover cursor-pointer transition duration-300 ease-in-out`}
             />
             </div>
