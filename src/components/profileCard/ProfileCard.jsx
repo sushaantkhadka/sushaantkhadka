@@ -67,7 +67,7 @@ export default function ProfileCard({theme}) {
           </div>
 
           <div className="flex items-center justify-center gap-4 mt-4">
-            <Link href={"/"} download={"Sushant_khadka_cv"} className="">
+            <Link href={"/image/portfolio/Sushant_khadka_cv.pdf"} download={"Sushant_khadka_cv"} className="">
               <button className={`py-3 px-8  text-md rounded-2xl cursor-pointer border-2 border-transparent transition duration-400 ease-in-out ${theme? "bg-green-500 resume-dark" :"bg-orange-500 resume"} shadow-sm border-global-color text-global-color`}>Resume</button>
             </Link>
 
