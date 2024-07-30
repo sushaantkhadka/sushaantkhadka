@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sushant Khadka</title>
+    <link rel=icon href="images\Logo\logo2.png">
+
+
+    <meta property="og:title" content="Sushant's Portfolio" />
+    <meta property="og:image" itemprop="image" content="https://khadkasushant.com.np/images/preview-portfolio.png" />
+    <meta property="og:image:alt"
+        content="Hi I am Sushant Khadka. I am a UiUx Designer & Frontend Developer. Click to visit website." />
+    <meta property="og:description" content="Project by Sushant Khadka" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta name="twitter:card" content="summary" />
+    <meta name="description" content="I'm the Michelangelo of graphics, chiseling visuals that leap out of the screen and
+    dance a tango with your eyeballs. Logos, icons, illustrations – you name it, I'll make it so
+    captivating that even Picasso would be jealous. Click to visit website." />
+    <meta name="theme-color" content="#000000" />
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, Portfolio, Sushant Khadka, animation, particles, constellation, frontend, chatgpt, cool, website" />
+    <meta name="author" content="Sushant Khadka" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/themeMode.css">
+    <link rel="stylesheet" type="text/css" href="css/whitemode.css">
+
+
+    <style>
+        html{
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            scrollbar-color: #dddcd6 transparent;
+            scroll-margin: 0px;
+        }
+
+        html::-webkit-scrollbar{
+            width: 1vw;
+        }
+
+        * {
+            --light-mode-color: #FF5733;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f3eb;
+            color: #171717;
+            --global-color: var(--light-mode-color);
+            /* Set global color for light mode */
+            --color: black;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin: 15px;
+        }
+
+
+        .container {
+            width: 100%;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 100vh;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+
+
+        /* card */
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin-top: -60px;
+            color: var(--color);
+        }
+
+        .profile-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 0.5em;
+            padding: 2em 2.5em;
+            border-radius: 2em;
+            background-color: rgba(207, 207, 207, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-card img {
+            width: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--global-color);
+            box-shadow: 0 0 25px var(--global-color);
+            cursor: pointer;
+            transition: 0.3 ease;
+        }
+
+        .profile-card img:hover {
+            box-shadow: 0 0 25px var(--global-color),
+                0 0 50px var(--global-color),
+                0 0 100px var(--global-color);
+        }
+
+        .profile-card .numbers-grid {
+            margin-top: -30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2em;
+
+        }
+
+        .profile-card .btn-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        .btn-box button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 1em;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: 0.4s ease-in-out;
+        }
+
+        .btn-box .resume {
+            background-color: var(--global-color);
+            box-shadow: 0 0 var(--global-color);
+            color: #171717;
+        }
+
+        .btn-box .resume:hover {
+            background-color: transparent;
+            border: 2px solid var(--global-color);
+            color: var(--global-color);
+            box-shadow: 0 0 25px var(--global-color),
+                0 0 10px var(--global-color);
+        }
+
+        .btn-box .message {
+            background-color: transparent;
+            border: 2px solid var(--global-color);
+            color: var(--global-color);
+            box-shadow: 0 0 25ox var(--global-color),
+                inset 0 0 10px var(--global-color);
+        }
+
+        .numbers-grid {
+            color: var(--color);
+        }
+
+        .numbers-grid .box p:first-child {
+            font-weight: 800;
+        }
+
+        .numbers-grid .box p:last-child {
+            margin-top: -20px;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .info-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            margin-top: -10px;
+        }
+
+        .info h2 {
+            color: var(--color);
+        }
+
+        .info p {
+            margin-top: -20px;
+            color: var(--global-color);
+        }
+
+
+        .info-box .icons {
+            margin: 20px 0;
+        }
+
+
+        .info-box .icons i {
+            font-size: 1em;
+            padding: 1px;
+            color: var(--color);
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+        }
+
+
+        .info-box .icons i:hover {
+            color: var(--global-color);
+        }
+
+
+        /* sections  */
+
+       
+
+        .two {
+            background: #000;
+            color: white;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/sansita-one-3" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Audio Sound Track -->
+    <audio id="myAudio" loop>
+        <source src="static/music/soft.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <div class="canvasWhite" id="canvasWhite"></div>
+
+
+
+
+    <!-- container  -->
+    <div class="container">
+
+        <section>
+            <div class="one">
+                <div class="nav">
+                    <div class="topnav">
+                        <div class="themeMode">
+                            <label class="label">
+                                <div class="toggle">
+                                    <input class="toggle-state" type="checkbox" id="check" name="check" value="check">
+                                    <div class="indicator"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- profile card section  -->
+                <div class="card">
+                    <div class="profile-card">
+                        <div class="info-box">
+                            <img src="images/sushantprofile.png" alt="profile-image">
+
+                            <!-- my information -->
+                            <div class="info">
+                                <h2>Sushant Khadka</h2>
+                                <p id="designation">UiUx Designer</p>
+                            </div>
+                            <!-- icons and links -->
+                            <div class="icons">
+                                <a href="https://www.instagram.com/khadka_sushaant" target="_blank"><i
+                                        class='bx bxl-instagram'></i></a>
+                                <a href="https://www.linkedin.com/in/khadka-sushant/" target="_blank"><i
+                                        class='bx bxl-linkedin-square'></i></a>
+                                <a href="https://github.com/sushaantkhadka" target="_blank"><i
+                                        class='bx bxl-github'></i></a>
+                                <a href="https://www.behance.net/sushaantkhadka" target="_blank"><i
+                                        class='bx bxl-behance'></i></a>
+                                <a href="https://twitter.com/khadka_sushaant" target="_blank"><i
+                                        class='bx bxl-twitter'></i></a>
+                            </div>
+                        </div>
+
+                        <!-- numbers uiux/frontend changing box -->
+                        <div class="numbers-grid" id="uiux">
+                            <div class="box" id="projects">
+                                <p>99k</p>
+                                <p>Ideas</p>
+                            </div>
+
+                            <div class="box" id="projects">
+                                <p>1k</p>
+                                <p>Noted</p>
+                            </div>
+
+                            <div class="box" id="projects">
+                                <p>9</p>
+                                <p>Executed</p>
+                            </div>
+                        </div>
+
+                        <!-- buttons and link  -->
+                        <div class="btn-box">
+                            <a id="resumeLink" href="images/Portfolio/Sushant_khadka_cv.pdf"
+                                download="Sushant_khadka_cv"><button class="resume">Resume</button>
+                            </a>
+                            <button class="message">Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="two">
+            <h1>hello</h1>
+        </section>
+
+
+    </div>
+    
+    <script src="js/notes/run.js" type="module"></script>
+
+
+</body>
+
+</html>

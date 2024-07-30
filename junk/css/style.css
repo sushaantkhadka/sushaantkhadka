@@ -1,0 +1,268 @@
+* {
+  --light-mode-color: #FF5733; /* Define color for light mode */
+  --dark-mode-color: #00f73f;
+  box-sizing: border-box;
+  
+  
+}
+
+/* Default light mode styles */
+body {
+  background: #f5f3eb;
+  color: #171717;
+  --global-color: var(--light-mode-color); /* Set global color for light mode */
+  --color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #030908;
+  color: #f5f3eb;
+  --global-color: var(--dark-mode-color); /* Set global color for dark mode */
+  --color: white;
+  font-family: 'Kode Mono', monospace;
+}
+
+.landing{
+  display: flex;
+}
+
+.container{
+  display: none;
+}
+
+
+#canvas {
+  display: none;
+  position: absolute; /* Use absolute or relative positioning */
+  width: 100%;
+  height: 100%;
+  border: 4px solid black;
+
+}
+
+#canvasWhite {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* topnav  */
+.topnav {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* card */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -60px;
+  color: var(--color);
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  padding: 2em 2.5em;
+  border-radius: 2em;
+  background-color: rgba(207, 207, 207, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--global-color);
+  box-shadow: 0 0 25px var(--global-color);
+  cursor: pointer;
+  transition: 0.3 ease;
+}
+
+.profile-card img:hover {
+  box-shadow: 0 0 25px var(--global-color),
+              0 0 50px var(--global-color),
+              0 0 100px var(--global-color);
+}
+
+.profile-card .numbers-grid{
+  margin-top: -30px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2em;
+
+}
+
+.profile-card .btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.btn-box button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 1em;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-box .resume {
+  background-color: var(--global-color);
+  box-shadow: 0 0 var(--global-color);
+  color: #171717;
+}
+
+.btn-box .resume:hover {
+  background-color: transparent;
+  border: 2px solid var(--global-color);
+  color: var(--global-color);
+  box-shadow: 0 0 25px var(--global-color),
+              0 0 10px var(--global-color);
+}
+
+.btn-box .message {
+  background-color: transparent;
+  border: 2px solid var(--global-color);
+  color: var(--global-color);
+  box-shadow: 0 0 25ox var(--global-color),
+              inset 0 0 10px var(--global-color);
+}
+
+.numbers-grid{
+  color: var(--color);
+}
+
+.numbers-grid .box p:first-child{
+  font-weight: 800;
+}
+
+.numbers-grid .box p:last-child{
+  margin-top: -20px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+#uiux{
+  display: none;
+}
+
+#frontend{
+  display: none;
+}
+
+
+.info-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.info h2{
+  color: var(--color);
+}
+
+.info p {
+  margin-top: -20px;
+  color: var(--global-color);
+}
+
+
+.info-box .icons {
+  margin: 20px 0;
+}
+
+
+.info-box .icons i {
+  font-size: 1em;
+  padding: 1px;
+  color: var(--color);
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+
+.info-box .icons i:hover {
+  color: var(--global-color);
+}
+
+
+/* github chart */
+.gitCard{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  padding: 2em 2.5em;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+}
+
+.gitCard button {
+  padding: 0px 25px;
+  font-size: 16px;
+  border-radius: 1em;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.gitCard .github{
+  background-color: var(--global-color);
+  box-shadow: 0 0 var(--global-color);
+  color: #171717;
+}
+
+.gitCard .github:hover {
+  background-color: transparent;
+  border: 2px solid var(--global-color);
+  color: var(--global-color);
+  box-shadow: 0 0 25px var(--global-color),
+              0 0 10px var(--global-color);
+}
+
+
+/* project card  */
+.projectCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  padding: 2em 2.5em;
+
+}
+
