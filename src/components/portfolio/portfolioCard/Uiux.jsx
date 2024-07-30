@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Uiux(portfolio, index) {
   const data = portfolio;
@@ -12,13 +13,13 @@ export default function Uiux(portfolio, index) {
     >
       <div className="m-5 w-[320px] md:w-[750px] md:h-[250px] flex flex-col md:flex-row gap-5">
         <div className=" relative mx-auto h-auto overflow-hidden rounded-lg shadow-md">
-          <img
+          <Image
             src={data.portfolio.image}
             alt="Akriti Portfolio"
             width={100}
             height={100}
             className="h-200px md:h-[250px] w-[400px] object-cover opacity-100 rounded-lg transition-all duration-300 ease-in-out hover:opacity-80 hover:scale-110"
-          />
+            />
         </div>
 
         <div className="flex flex-col md:justify-between items-start md:h-full md:w-[320px] py-2 ">
