@@ -4,10 +4,12 @@ import React from "react";
 const LandingNav = ({ theme }) => {
   const navList = [
     {
+      id: 1,
       menu: "Writing",
       link: "/blog",
     },
     {
+      id: 2,
       menu: "Shooting",
       link: "#",
     },
@@ -16,8 +18,8 @@ const LandingNav = ({ theme }) => {
   return (
     <>
       <div className="hidden absolute right-0 md:flex justify-end align-top gap-10 mt-[2px] mr-10">
-        {navList.map((nav, navIndex) => (
-          <Link href={nav.link} key={navIndex}>
+        {navList.map((nav) => (
+          <Link href={nav.link} key={nav.id}>
             <p
               className={`${
                 theme
