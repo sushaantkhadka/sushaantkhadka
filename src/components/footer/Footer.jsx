@@ -7,12 +7,13 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 export default function Footer({theme}) {
   return (
     <footer className={`flex my-10 justify-center ${theme? "text-white" : "text-black"}`}>
-        <div className='flex flex-col sm:flex-row md:w-[720px] lg:w-[1080px] justify-between'>
+        <div className='flex flex-col items-center md:flex-row md:w-[720px] lg:w-[1080px] justify-between gap-5'>
             <Link href={"#top"} className='flex gap-1 items-center'>
             <Image 
                     src={"/image/Logo/logo2.png"}
                     width={100}
                     height={100}
+                    alt="sushant's logo"
                     className='w-[20px] h-[20px]'
                     priority
                 />
