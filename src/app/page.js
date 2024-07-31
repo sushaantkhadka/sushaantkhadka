@@ -9,6 +9,7 @@ import LandingNav from "@/components/nav/LandingNav";
 import darkModeAudio from "../../public/audio/rock.mp3";
 import lightModeAudio from "../../public/audio/soft.mp3";
 import Footer from "@/components/footer/Footer";
+import FloatingLetter from "@/components/backgrounds/FloatingLetter";
 
 export default function Page() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -49,7 +50,7 @@ export default function Page() {
         className={`${!mouseState ? "cursor-grab" : "cursor-grabbing"}`}
         onClick={mouseEffect}
       >
-        {isDarkMode && <MatrixEffect />}
+        {isDarkMode? <MatrixEffect /> : <FloatingLetter />}
         <LandingNav theme={isDarkMode} />
         <div className="m-4 flex flex-col justify-center items-center" id="top">
           <ThemeToggle isDarkMode={isDarkMode} onToggle={handleToggle} />
