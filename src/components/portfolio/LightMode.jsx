@@ -8,7 +8,7 @@ export default function LightMode({}) {
       id: 1,
       image: "/image/Sample projects/com200.png",
       title: "Com-2000: AI + Web3 Accelerator",
-      desc: "Com2000 is a leading AI+Web3 Accelerator across SE Asia, Vietnam, Singapore, Thailand, Hong Kong, Shenzhen, Taiwan, Switzerland, USA and UK dedicated to the development of ABCDE - AI, Blockchain, Cloud, Data & Ecommerce technologies. ",
+      desc: "Leading AI+Web3 Accelerator across SE Asia, Vietnam, Singapore, Thailand, Hong Kong, Shenzhen, Taiwan, Switzerland, USA and UK dedicated to the development of ABCDE - AI, Blockchain, Cloud, Data & Ecommerce technologies. ",
       categories: ["Web", "Portfolio"],
       link: "https://com2000.netlify.app",
     },
@@ -40,7 +40,7 @@ export default function LightMode({}) {
       id: 5,
       image: "/image/Sample projects/canbea.png",
       title: "CanBe-A: A Social App",
-      desc: "A social app set in a vibrant college environment. Customize your avatar, join clubs, and participate in exciting campus activities. Engage in pranks, club wars, and parties, and form relationships to boost your stats. Circle combines social interaction with engaging experience, making it the ultimate virtual college experience.",
+      desc: "A social app set in a vibrant college environment. Customize your avatar, join clubs, and participate in exciting campus activities. CabBe-A combines social interaction with engaging experience, making it the ultimate virtual college experience.",
       categories: ["Social", "App"],
       link: "",
     },
@@ -58,7 +58,7 @@ export default function LightMode({}) {
     <div>
       <h1 className='font-bold text-3xl text-center'>My Portfolio</h1>
        {portfolios.map((portfolio, index) => (
-        <Uiux key={portfolio.id || index} portfolio={portfolio} />
+        <Uiux key={portfolio.id || index} portfolio={portfolio} index={index} />
        ))}
     </div>
   )
