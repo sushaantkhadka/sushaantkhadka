@@ -15,7 +15,7 @@ export default function LightMode({}) {
     {
       id: 2,
       image: "/image/Sample projects/docdash.png",
-      title: "DOCDASh- Digital HealthCare",
+      title: "DOCDASH- Digital HealthCare",
       desc: "Complete, collaborative and comprehensive health data fabric and integration platform",
       categories: ["Healthcare", "App"],
       link: "",
