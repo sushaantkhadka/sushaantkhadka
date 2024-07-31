@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Uiux(portfolio) {
   const data = portfolio;
-  const filterClass = data.portfolio.catagories.join(" ");
+  const filterClass = data.portfolio.categories.join(" ");
   // console.log(filterClass)
   return (
     <div
@@ -25,10 +26,10 @@ export default function Uiux(portfolio) {
         <div className="flex flex-col md:justify-between items-start md:h-full md:w-[320px] py-2 ">
           <div>
             <div className="flex">
-              {data.portfolio.catagories.map((category, categoryIndex) => (
+              {data.portfolio.categories.map((category, categoryIndex) => (
                 <p key={categoryIndex} className="text-purple-500 text-sm">
                   {category}
-                  {categoryIndex < data.portfolio.catagories.length - 1
+                  {categoryIndex < data.portfolio.categories.length - 1
                     ? ","
                     : ""} &nbsp;
                 </p>
@@ -41,9 +42,10 @@ export default function Uiux(portfolio) {
           </div>
           <Link
             href={data.portfolio.link}
-            className="text-orange-500 hover:text-orange-700"
+            target="_blank"
+            className={`text-orange-500 hover:text-orange-700 flex items-center`}
           >
-            View Project
+            {data.portfolio.categories.includes("Web")? "Visit Site" : "View Project"} &nbsp; <FaExternalLinkAlt />
           </Link>
         </div>
       </div>

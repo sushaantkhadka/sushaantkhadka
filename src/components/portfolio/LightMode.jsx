@@ -6,48 +6,57 @@ export default function LightMode({}) {
   const portfolios = [
     {
       id: 1,
-      image: "/image/portfolio/akriti.png",
-      title: "Portfolio Design",
-      desc: "Then to add a utility but only have it take effect at a certain breakpoint, all you need to do is prefix the utility with the breakpoint name, followed by the : character:",
-      catagories: ["Web", "Portfolio"],
-      link: "",
+      image: "/image/Sample projects/com200.png",
+      title: "Com-2000: AI + Web3 Accelerator",
+      desc: "Com2000 is a leading AI+Web3 Accelerator across SE Asia, Vietnam, Singapore, Thailand, Hong Kong, Shenzhen, Taiwan, Switzerland, USA and UK dedicated to the development of ABCDE - AI, Blockchain, Cloud, Data & Ecommerce technologies. ",
+      categories: ["Web", "Portfolio"],
+      link: "https://com2000.netlify.app",
     },
     {
       id: 2,
-      image: "/image/portfolio/audio book.png",
-      title: "Audio Book Design",
-      desc: "Every utility class in Tailwind can be applied conditionally at different breakpoints, which makes it a piece of cake to build complex responsive interfaces without ever leaving your HTML.",
-      catagories: ["Blog", "App"],
+      image: "/image/Sample projects/docdash.png",
+      title: "DOCDASh- Digital HealthCare",
+      desc: "Complete, collaborative and comprehensive health data fabric and integration platform",
+      categories: ["Healthcare", "App"],
       link: "",
     },
     {
       id: 3,
-      image: "/image/portfolio/ephoria.png",
-      title: "Portfolio Design",
-      desc: "Here a simple example of a marketing page component that uses a stacked layout on small screens, and a side-by-side layout on larger screens:",
-      catagories: ["Ecommerce", "Web"],
-      link: "",
+      image: "/image/Sample projects/ebs.png",
+      title: "Ecommerce Store",
+      desc: "E-commerce Website is an online multi vendor service provider website, where user can order products, grocerry, beauty products and any other necessities. This platform connects users to the local market and companies",
+      categories: ["Ecommerce", "Web"],
+      link: "https://ebsstore.com",
     },
     {
       id: 4,
-      image: "/image/portfolio/ecommerce.png",
-      title: "Ecommerce",
-      desc: "This works for every utility class in the framework, which means you can change literally anything at a given breakpoint — even things like letter spacing or cursor styles.",
-      catagories: ["Ecommerce", "Web"],
-      link: "",
+      image: "/image/Sample projects/sajilokar.png",
+      title: "Sajilo Kar App",
+      desc: "Sajilokar is a revolutionary mobile app that simplifies your tax management experience. We understand the challenges and complexities of tax payments, and our mission is to provide a seamless and convenient solution for individuals like you.",
+      categories: ["Finance", "App"],
+      link: "https://www.sajilokar.com",
     },
     {
       id: 5,
-      image: "/image/portfolio/health dashboard.png",
-      title: "Health checkup",
-      desc: "By default, the outer div is display: block, but by adding the md:flex utility, it becomes display: flex on medium screens and larger.",
-      catagories: ["Service", "App"],
+      image: "/image/Sample projects/canbea.png",
+      title: "CanBe-A: A Social App",
+      desc: "A social app set in a vibrant college environment. Customize your avatar, join clubs, and participate in exciting campus activities. Engage in pranks, club wars, and parties, and form relationships to boost your stats. Circle combines social interaction with engaging experience, making it the ultimate virtual college experience.",
+      categories: ["Social", "App"],
+      link: "",
+    },
+    {
+      id: 6,
+      image: "/image/Sample projects/ewallet.png",
+      title: "eWallet",
+      desc: "A convenient digital wallet that allows users to connect multiple banks and make transactions directly from a single platform.",
+      categories: ["Finance", "App" , "Web"],
       link: "",
     },
   ];
   
   return (
     <div>
+      <h1 className='font-bold text-3xl text-center'>My Portfolio</h1>
        {portfolios.map((portfolio, index) => (
         <Uiux key={portfolio.id || index} portfolio={portfolio} />
        ))}
