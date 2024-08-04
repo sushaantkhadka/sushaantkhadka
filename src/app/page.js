@@ -52,7 +52,7 @@ export default function Page() {
       >
         {isDarkMode? <MatrixEffect /> : <FloatingLetter />}
         <LandingNav theme={isDarkMode} />
-        <div className="m-4 flex flex-col justify-center items-center" id="top">
+        <div className="m-4 flex flex-col justify-center items-center" id="hero">
           <ThemeToggle isDarkMode={isDarkMode} onToggle={handleToggle} />
           <ProfileCard theme={isDarkMode} />
           {isDarkMode ? <DarkMode /> : <LightMode theme={isDarkMode} />}

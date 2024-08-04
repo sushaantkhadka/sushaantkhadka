@@ -8,7 +8,7 @@ export default function Footer({theme}) {
   return (
     <footer className={`flex my-10 justify-center ${theme? "text-white" : "text-black"}`}>
         <div className='flex flex-col items-center md:flex-row md:w-[720px] lg:w-[1080px] justify-between gap-5'>
-            <Link href={"#top"} className='flex gap-1 items-center'>
+            <Link href={"#hero"} className='flex gap-1 items-center'>
             <Image 
                     src={"/image/Logo/logo2.png"}
                     width={100}
