@@ -55,7 +55,9 @@ export default function Page() {
         <div className="m-4 flex flex-col justify-center items-center" id="hero">
           <ThemeToggle isDarkMode={isDarkMode} onToggle={handleToggle} />
           <ProfileCard theme={isDarkMode} />
+          <div className="m-10">
           {isDarkMode ? <DarkMode /> : <LightMode theme={isDarkMode} />}
+          </div>
         </div>
       </div>
       <Footer theme={isDarkMode} />

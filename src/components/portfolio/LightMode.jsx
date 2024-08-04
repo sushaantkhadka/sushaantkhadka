@@ -56,7 +56,7 @@ export default function LightMode({}) {
   
   return (
     <div>
-      <h1 className='font-bold text-3xl text-center'>My Portfolio</h1>
+      <h1 className='font-bold text-3xl text-center text-orange-500'>My Portfolio</h1>
        {portfolios.map((portfolio, index) => (
         <Uiux key={portfolio.id || index} portfolio={portfolio} index={index} />
        ))}
