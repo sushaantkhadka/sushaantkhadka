@@ -14,6 +14,7 @@ import FloatingLetter from "@/components/backgrounds/FloatingLetter";
 export default function Page() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [mouseState, setMouseState] = useState(false);
+  const [musicState, setMusicState] = useState(true);
   const darkModeMusic = useRef(null);
   const lightModeMusic = useRef(null);
 
@@ -22,15 +23,41 @@ export default function Page() {
     lightModeMusic.current = new Audio(lightModeAudio);
   }, []);
 
-  const handleToggle = () => {
-    setIsDarkMode(!isDarkMode);
-    if (!isDarkMode) {
-      lightModeMusic.current.pause();
-      darkModeMusic.current.play();
+  const pauseMusic = () => {
+    setMusicState(!musicState);
+    // console.log("play music", musicState);
+    
+    
+    if(musicState){
+      if(!isDarkMode) {
+        lightModeMusic.current.pause();
+      } else {
+        darkModeMusic.current.pause();
+      }
+      // console.log("inside", musicState);
+
     } else {
-      darkModeMusic.current.pause();
-      lightModeMusic.current.play();
+      playMusic()
     }
+  }
+
+  const playMusic = () => {
+    // console.log("play music", musicState);
+    if(musicState) {
+      if (!isDarkMode) {
+        lightModeMusic.current.pause();
+        darkModeMusic.current.play();
+      } else {
+        darkModeMusic.current.pause();
+        lightModeMusic.current.play();
+      } 
+    }
+  }
+
+  const handleToggle = () => {
+    playMusic()
+    setIsDarkMode(!isDarkMode);
+    
     document.body.classList.toggle("dark-mode", !isDarkMode);
   };
 
@@ -51,7 +78,7 @@ export default function Page() {
         onClick={mouseEffect}
       >
         {isDarkMode? <MatrixEffect /> : <FloatingLetter />}
-        <LandingNav theme={isDarkMode} />
+        <LandingNav theme={isDarkMode} musicState={musicState} pause={pauseMusic} />
         <div className="m-4 flex flex-col justify-center items-center" id="hero">
           <ThemeToggle isDarkMode={isDarkMode} onToggle={handleToggle} />
           <ProfileCard theme={isDarkMode} />
