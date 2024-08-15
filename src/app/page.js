@@ -10,9 +10,13 @@ import darkModeAudio from "../../public/audio/rock.mp3";
 import lightModeAudio from "../../public/audio/soft.mp3";
 import Footer from "@/components/footer/Footer";
 import FloatingLetter from "@/components/backgrounds/FloatingLetter";
+import Landing from "@/components/Landing/Landing";
 
 export default function Page() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const [isLanding, setIsLanding] = useState(true);
+
   const [mouseState, setMouseState] = useState(false);
   const [musicState, setMusicState] = useState(true);
   const darkModeMusic = useRef(null);
@@ -23,13 +27,17 @@ export default function Page() {
     lightModeMusic.current = new Audio(lightModeAudio);
   }, []);
 
+  const onLanding = () => {
+    setIsLanding(!isLanding);
+  }
+
   const pauseMusic = () => {
     setMusicState(!musicState);
     // console.log("play music", musicState);
-    
-    
-    if(musicState){
-      if(!isDarkMode) {
+
+
+    if (musicState) {
+      if (!isDarkMode) {
         lightModeMusic.current.pause();
       } else {
         darkModeMusic.current.pause();
@@ -43,21 +51,21 @@ export default function Page() {
 
   const playMusic = () => {
     // console.log("play music", musicState);
-    if(musicState) {
+    if (musicState) {
       if (!isDarkMode) {
         lightModeMusic.current.pause();
         darkModeMusic.current.play();
       } else {
         darkModeMusic.current.pause();
         lightModeMusic.current.play();
-      } 
+      }
     }
   }
 
   const handleToggle = () => {
     playMusic()
     setIsDarkMode(!isDarkMode);
-    
+
     document.body.classList.toggle("dark-mode", !isDarkMode);
   };
 
@@ -73,21 +81,25 @@ export default function Page() {
 
   return (
     <>
+
+      {isLanding? <Landing onClick={onLanding} /> : <>
       <div
         className={`${!mouseState ? "cursor-grab" : "cursor-grabbing"}`}
         onClick={mouseEffect}
       >
-        {isDarkMode? <MatrixEffect /> : <FloatingLetter />}
+        {isDarkMode ? <MatrixEffect /> : <FloatingLetter />}
         <LandingNav theme={isDarkMode} musicState={musicState} pause={pauseMusic} />
         <div className="m-4 flex flex-col justify-center items-center" id="hero">
           <ThemeToggle isDarkMode={isDarkMode} onToggle={handleToggle} />
           <ProfileCard theme={isDarkMode} />
           <div className="m-10">
-          {isDarkMode ? <DarkMode /> : <LightMode theme={isDarkMode} />}
+            {isDarkMode ? <DarkMode /> : <LightMode theme={isDarkMode} />}
           </div>
         </div>
       </div>
       <Footer theme={isDarkMode} />
+    </>}
+
     </>
   );
 }
