@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         'sans' : 'Sansita One, sans-serif',
+        'kode' : 'Kode Mono, monospace',
       },
     },
   },

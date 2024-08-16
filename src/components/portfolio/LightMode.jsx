@@ -28,14 +28,14 @@ export default function LightMode({}) {
       categories: ["Ecommerce", "Web"],
       link: "https://ebsstore.com",
     },
-    {
-      id: 4,
-      image: "/image/Sample projects/sajilokar.png",
-      title: "Sajilo Kar App",
-      desc: "Sajilokar is a revolutionary mobile app that simplifies your tax management experience. We understand the challenges and complexities of tax payments, and our mission is to provide a seamless and convenient solution for individuals like you.",
-      categories: ["Finance", "App"],
-      link: "https://www.sajilokar.com",
-    },
+    // {
+    //   id: 4,
+    //   image: "/image/Sample projects/sajilokar.png",
+    //   title: "Sajilo Kar App",
+    //   desc: "Sajilokar is a revolutionary mobile app that simplifies your tax management experience. We understand the challenges and complexities of tax payments, and our mission is to provide a seamless and convenient solution for individuals like you.",
+    //   categories: ["Finance", "App"],
+    //   link: "https://www.sajilokar.com",
+    // },
     {
       id: 5,
       image: "/image/Sample projects/canbea.png",
