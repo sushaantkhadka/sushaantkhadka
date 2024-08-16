@@ -78,12 +78,13 @@ export default function ProfileCard({ theme }) {
             </div>
 
             <div className="my-3 flex ">
-              {socials.map((social) => (
+              {socials.map((social, index) => (
                 <Link
                   className={`text-sm p-3 ${theme ? "hover:text-green-500" : "hover:text-orange-500"
                     }  transition duration-300 ease-in-out`}
                   href={social.link}
                   target="_blank"
+                  key={index}
                 >
                   {social.icon}
                 </Link>
