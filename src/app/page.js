@@ -29,12 +29,10 @@ export default function Page() {
 
   const onLanding = () => {
     setIsLanding(!isLanding);
-    playMusic();
   }
 
   const pauseMusic = () => {
     setMusicState(!musicState);
-    // console.log("play music", musicState);
 
 
     if (musicState) {
@@ -43,7 +41,6 @@ export default function Page() {
       } else {
         darkModeMusic.current.pause();
       }
-      // console.log("inside", musicState);
 
     } else {
       playMusic()
@@ -51,7 +48,6 @@ export default function Page() {
   }
 
   const playMusic = () => {
-    // console.log("play music", musicState);
     if (musicState) {
       if (!isDarkMode) {
         lightModeMusic.current.pause();
@@ -64,8 +60,10 @@ export default function Page() {
   }
 
   const handleToggle = () => {
-    playMusic()
     setIsDarkMode(!isDarkMode);
+    playMusic()
+    // console.log(isDarkMode);
+    
 
     document.body.classList.toggle("dark-mode", !isDarkMode);
   };
