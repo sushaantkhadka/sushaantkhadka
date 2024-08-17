@@ -29,6 +29,7 @@ export default function Page() {
 
   const onLanding = () => {
     setIsLanding(!isLanding);
+    playMusic();
   }
 
   const pauseMusic = () => {
