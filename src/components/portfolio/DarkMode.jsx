@@ -6,6 +6,7 @@ export default function DarkMode() {
     <div className="mb-20">
       <div className="flex flex-col justify-center items-center h-full">
         <h1 className="text-white font-bold">Github Contributions</h1>
+        
         <img src="https://raw.githubusercontent.com/sushaantkhadka/sushaantkhadka/output/snake.svg" />
 
         <a href="https://github.com/sushaantkhadka" target="_blank">

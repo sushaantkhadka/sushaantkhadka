@@ -11,7 +11,7 @@ import lightModeAudio from "../../public/audio/soft.mp3";
 import Footer from "@/components/footer/Footer";
 import FloatingLetter from "@/components/backgrounds/FloatingLetter";
 import Landing from "@/components/Landing/Landing";
-import ProgerssBar from "@/components/progressbar/progerssBar";
+import ProgressBar from "@/components/progressbar/ProgressBar";
 
 export default function Page() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -81,7 +81,7 @@ export default function Page() {
 
   return (
     <>
-      <ProgerssBar theme={isDarkMode} />
+      <ProgressBar theme={isDarkMode} />
 
       {isLanding? <Landing onClick={onLanding} /> : <>
       <div

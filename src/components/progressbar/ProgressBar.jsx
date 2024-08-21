@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, useScroll } from "framer-motion"
 
-export default function ProgerssBar({ theme }) {
+export default function ProgressBar({ theme }) {
     const { scrollYProgress } = useScroll();
   return (
     <motion.div
