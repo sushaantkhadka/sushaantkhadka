@@ -15,7 +15,7 @@ export default function Uiux(portfolio, index) {
         <div className=" relative mx-auto h-auto overflow-hidden rounded-lg shadow-md">
           <Image
             src={data.image}
-            alt="Akriti Portfolio"
+            alt={data.image}
             width={400}
             height={250}
             priority

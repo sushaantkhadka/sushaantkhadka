@@ -20,14 +20,14 @@ export default function LightMode({}) {
       categories: ["Healthcare", "App"],
       link: "",
     },
-    {
-      id: 3,
-      image: "/image/Sample projects/ebs.png",
-      title: "Ecommerce Store",
-      desc: "E-commerce Website is an online multi vendor service provider website, where user can order products, grocerry, beauty products and any other necessities. This platform connects users to the local market and companies",
-      categories: ["Ecommerce", "Web"],
-      link: "https://ebsstore.com",
-    },
+    // {
+    //   id: 3,
+    //   image: "/image/Sample projects/ebs.png",
+    //   title: "Ecommerce Store",
+    //   desc: "E-commerce Website is an online multi vendor service provider website, where user can order products, grocerry, beauty products and any other necessities. This platform connects users to the local market and companies",
+    //   categories: ["Ecommerce", "Web"],
+    //   link: "https://ebsstore.com",
+    // },
       // {
       //   id: 4,
       //   image: "/image/Sample projects/sajilokar.png",
