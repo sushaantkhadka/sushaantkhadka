@@ -1,17 +1,17 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
-import ProfileCard from "@/components/profileCard/ProfileCard";
-import ThemeToggle from "@/components/themetoggle/ThemeToggle";
+import FloatingLetter from "@/components/backgrounds/FloatingLetter";
 import MatrixEffect from "@/components/backgrounds/MatrixEffect";
-import LightMode from "@/components/portfolio/LightMode";
-import DarkMode from "@/components/portfolio/DarkMode";
+import Footer from "@/components/footer/Footer";
+import Landing from "@/components/Landing/Landing";
 import LandingNav from "@/components/nav/LandingNav";
+import DarkMode from "@/components/portfolio/DarkMode";
+import LightMode from "@/components/portfolio/LightMode";
+import ProfileCard from "@/components/profileCard/ProfileCard";
+import ProgressBar from "@/components/progressbar/ProgressBar";
+import ThemeToggle from "@/components/themetoggle/ThemeToggle";
+import { useEffect, useRef, useState } from "react";
 import darkModeAudio from "../../public/audio/rock.mp3";
 import lightModeAudio from "../../public/audio/soft.mp3";
-import Footer from "@/components/footer/Footer";
-import FloatingLetter from "@/components/backgrounds/FloatingLetter";
-import Landing from "@/components/Landing/Landing";
-import ProgressBar from "@/components/progressbar/ProgressBar";
 
 export default function Page() {
   const [isDarkMode, setIsDarkMode] = useState(false);
