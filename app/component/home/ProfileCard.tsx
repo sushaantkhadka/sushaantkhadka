@@ -46,7 +46,7 @@ export default function ProfileCard() {
             {/* details and download button  */}
             <div className='flex justify-between'>
                 <div className='flex gap-3'>
-                    <Image src={"/Details section.png"} alt='' width={150} height={150} className='w-24 h-24 rounded-lg' />
+                    <Image src={"/Details section.png"} alt='profile image' width={150} height={150} className='w-24 h-24 rounded-lg' />
                     <div className='flex flex-col justify-between'>
                         <p className='text-[12px] px-3 border border-gray-400 text-gray-400 rounded-full flex justify-center items-center gap-2'> <span className='bg-green-500 w-1.5 h-1.5 rounded-full' /> Available To Work</p>
                         <div>
