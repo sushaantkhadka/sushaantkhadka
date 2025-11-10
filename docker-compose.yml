@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  web:
+    container_name: nextjs_dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"  # Enable polling for file changes
+      CHOKIDAR_INTERVAL: "100"     # Poll every 100ms
+    volumes:
+      - .:/app:cached              # Mount project for hot reload
+      - /app/node_modules           # Isolate container node_modules
+    command: npm run dev
