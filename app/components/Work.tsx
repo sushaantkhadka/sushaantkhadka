@@ -1,10 +1,11 @@
 import React from "react";
 import { styles } from "../ui/styles";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Work({ children }: { children?: React.ReactNode }) {
   return (
-    <div className={`${styles.boxColor} w-[524px] flex flex-col gap-4`}>
+    <div className={`${styles.boxColor} w-[524px] flex flex-col gap-4 justify-center items-center`}>
       <h1 className="font-bold text-[40px] uppercase">
         They say <span className="text-blue-500">creating</span> is an{" "}
         <span className="text-blue-500">addiction —</span> the{" "}
@@ -17,9 +18,10 @@ export default function Work({ children }: { children?: React.ReactNode }) {
         <Image src={"/iPad mini.png"} alt="ipad mini" width={1080} height={753} className="w-[410px] h-[286px] select-none" />
         <div className="absolute w-[366px] h-60 rounded-md overflow-auto scrollbar-hide">
             {children ?? <MiniScreen />}
-        </div>
-        
+        </div>        
       </div>
+
+      <p className="w-fit content-fill text-gray-400 p-3 rounded-full border border-gray-400"><ArrowUpRight /></p>
       
     </div>
   );

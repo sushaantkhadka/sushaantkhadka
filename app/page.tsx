@@ -11,7 +11,7 @@ import X from "./components/X";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen mx-auto gap-4">
+    <div className="flex flex-col items-center pb-20 justify-center min-h-screen mx-auto gap-4">
       
 
       {/* section 1 */}
