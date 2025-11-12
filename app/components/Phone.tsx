@@ -7,8 +7,8 @@ export default function Phone() {
         console.log("Button clicked!");
     }
   return (
-    <div className={`${styles.boxColor} w-[342px] h-[682px] flex flex-col items-center justify-center gap-4`}>
-        <h1>
+    <div className={`${styles.boxColor} w-[342px] h-[700px] flex flex-col items-center justify-center gap-4`}>
+        <h1 className='font-bold text-[28px] uppercase'>
             Cooking...
         </h1>
         <div className='relative flex items-center justify-center'>
