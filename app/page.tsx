@@ -8,6 +8,7 @@ import Photos from "./components/Photos";
 import Work from "./components/Work";
 import Test from "./components/Test";
 import Phone from "./components/Phone";
+import Connect from "./components/Connect";
 
 export default function Home() {
   return (
@@ -32,17 +33,23 @@ export default function Home() {
         </div>
 
         {/* right section  */}
-        <div className="flex gap-4">
-          <Phone />
-          <div className="flex flex-col gap-4">
-          <Spotify />
-          <X />
-        </div>
+        <div className="flex flex-col gap-4">
+          {/* right top section  */}
+          <div className="flex gap-4">
+            <Phone />
+            <div className="flex flex-col gap-4">
+              <Spotify />
+              <X />
+            </div>
+          </div>
+
+          {/* right bottom section  */}
+          <Connect />
         </div>
       </div>
 
       {/* text  */}
-      <Test />
+      {/* <Test /> */}
     </div>
   );
 }

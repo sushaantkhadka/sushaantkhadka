@@ -44,7 +44,7 @@ export default function Carousel() {
 
   return (
     <div
-      className="relative w-[524px] h-[350px] overflow-hidden rounded-3xl shadow-2xl select-none cursor-pointer"
+      className="relative w-[524px] h-[350px] overflow-hidden rounded-3xl select-none cursor-pointer"
       onClick={handleClick}
     >
       {/* Top-right controls */}
