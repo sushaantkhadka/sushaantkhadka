@@ -47,7 +47,7 @@ export default function X() {
 
           <h1 className="text-2xl">
             Learning, Progressing{" "}
-            <Link href={"https://x.com/byte_mango"} className="text-blue-500">
+            <Link href={"https://x.com/byte_mango"} target="_blank" className="text-blue-500">
               @byte_mango
             </Link>
           </h1>
