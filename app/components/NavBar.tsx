@@ -20,21 +20,29 @@ export default function NavBar() {
   };
 
   return (
-    <div className="bg-[#F7F7F9] select-none w-fit p-2 flex gap-3 rounded-full border-[0.5px] border-gray-200 shadow-2xl text-gray-300 ">
-      {navLists.map((navList, index) => (
-        <Link
-          onClick={() => handleClick(navList.name)}
-          href={navList.link}
-          key={index}
-          className={`${
-            pathName === navList.link
-              ? "bg-white text-black rounded-full hover:text-black"
-              : ""
-          } hover:text-amber-500 px-6 py-1`}
-        >
-          {navList.name}
-        </Link>
-      ))}
+    <div className="w-screen space-y-2">
+      <h1 className="text-center mv-4 py-3 bg-green-500 font-bold text-white">
+        🚧 Mid-build era. Things are coming together.
+      </h1>
+     
+      <div className="flex justify-center items-center">  {/* remove this div later */}
+        <div className="bg-[#F7F7F9] select-none w-fit p-2 flex gap-3 rounded-full border-[0.5px] border-gray-200 shadow-2xl text-gray-300 ">
+          {navLists.map((navList, index) => (
+            <Link
+              onClick={() => handleClick(navList.name)}
+              href={navList.link}
+              key={index}
+              className={`${
+                pathName === navList.link
+                  ? "bg-white text-black rounded-full hover:text-black"
+                  : ""
+              } hover:text-amber-500 px-6 py-1`}
+            >
+              {navList.name}
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

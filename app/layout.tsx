@@ -18,7 +18,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
-        <div className="mb-16 mt-12 pt-4 mx-auto sticky top-0 z-50 w-fit">
+        <div className="mb-16  pt-4 mx-auto sticky top-0 z-50 w-fit">
           <NavBar />
         </div>
         {children}
