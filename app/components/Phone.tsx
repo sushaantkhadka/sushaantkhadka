@@ -28,7 +28,12 @@ export default function Phone() {
         icon: '/github.png',
         name: 'GitHub',
         link: 'https://github.com/sushaantkhadka'
-      },      
+      },  
+      {
+        icon: '/x.png',
+        name: 'X',
+        link: 'https://x.com/sushaant_khadka'
+      },     
     ]
 
 
