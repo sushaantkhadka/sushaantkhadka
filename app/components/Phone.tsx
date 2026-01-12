@@ -28,7 +28,7 @@ export default function Phone() {
         icon: '/github.png',
         name: 'GitHub',
         link: 'https://github.com/sushaantkhadka'
-      }
+      },      
     ]
 
 
@@ -40,13 +40,25 @@ export default function Phone() {
 
         <div className='relative flex items-center justify-center'>
 
-          <div className='absolute z-20 w-[250px] h-[520px] px-4 py-10 grid grid-cols-4 grid-rows-6 gap-3 overflow-y-auto'>
-            {apps.map((app, index) => (
-              <Link key={index} href={app.link} target='_blank' className='flex flex-col items-center w-fit'>
-            <Image src={app.icon} width={80} height={80} alt='behance' className='rounded-xl w-11 shadow-md'/>
-            <p className='text-[10px] text-shadow-md font-medium text-white'>{app.name}</p>
-            </Link>
-            ))} 
+          <div className='absolute z-20 w-[250px] h-[520px] px-4 pt-10 pb-4 flex flex-col justify-between '>
+
+            <div className='grid grid-cols-4 grid-rows-5 gap-3 overflow-y-auto'>
+              {apps.map((app, index) => (
+                <Link key={index} href={app.link} target='_blank' className='flex flex-col items-center w-fit'>
+              <Image src={app.icon} width={80} height={80} alt='behance' className='rounded-xl w-11 shadow-md'/>
+              <p className='text-[10px] text-shadow-md font-medium text-white'>{app.name}</p>
+              </Link>
+              ))}
+            </div>
+
+            <div className='grid grid-cols-4 grid-rows-1 h-auto overflow-hidden '>
+              {apps.map((app, index) => (
+                <Link key={index} href={app.link} target='_blank' className='flex flex-col items-center w-fit'>
+              <Image src={app.icon} width={80} height={80} alt='behance' className='rounded-xl w-11 shadow-md'/>
+              <p className='text-[10px] text-shadow-md font-medium text-white'>{app.name}</p>
+              </Link>
+              ))}
+            </div>
           </div>
 
             <Image src="/iPhone 16.png" width={500} height={500} alt="phone" className='pointer-events-auto z-10'/>
