@@ -54,6 +54,7 @@ export default function Carousel() {
           alt="Photos icon"
           width={1080}
           height={1080}
+          priority
           className="w-14 h-14 rounded-lg opacity-80 transition-opacity duration-500 ease-in-out pointer-events-auto"
         />
 

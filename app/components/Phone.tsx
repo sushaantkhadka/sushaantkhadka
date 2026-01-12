@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { styles } from '../ui/styles'
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Phone() {
 
@@ -15,9 +17,19 @@ export default function Phone() {
 
     return () => clearInterval(interval);
   }, []);
-    const handleClick = () => {
-        console.log("Button clicked!");
-    }
+
+    const apps = [
+      {
+        icon: '/behance.jpg',
+        name: 'Behance',
+        link: 'https://www.behance.net/sushaantkhadka'
+      },
+      {
+        icon: '/github.png',
+        name: 'GitHub',
+        link: 'https://github.com/sushaantkhadka'
+      }
+    ]
 
 
   return (
@@ -25,9 +37,20 @@ export default function Phone() {
         <h1 className='font-bold text-[28px] uppercase'>
             Cooking{".".repeat(dots)}
         </h1>
+
         <div className='relative flex items-center justify-center'>
-            <Image src="/iPhone 16.png" width={500} height={500} alt="phone" className='pointer-events-auto'/>
-            <button className='absolute bg-black text-white' onClick={handleClick}> hello</button>
+
+          <div className='absolute z-20 w-[250px] h-[520px] px-4 py-10 grid grid-cols-4 grid-rows-6 gap-3 overflow-y-auto'>
+            {apps.map((app, index) => (
+              <Link key={index} href={app.link} target='_blank' className='flex flex-col items-center w-fit'>
+            <Image src={app.icon} width={80} height={80} alt='behance' className='rounded-xl w-11 shadow-md'/>
+            <p className='text-[10px] text-shadow-md font-medium text-white'>{app.name}</p>
+            </Link>
+            ))} 
+          </div>
+
+            <Image src="/iPhone 16.png" width={500} height={500} alt="phone" className='pointer-events-auto z-10'/>
+            <Image src="/Wallpaper.jpg" width={500} height={500} alt="wallpaper" className='absolute w-[250px] rounded-4xl pointer-events-none'/>
         </div>
     </div>
   )

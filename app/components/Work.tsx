@@ -5,7 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Work({ children }: { children?: React.ReactNode }) {
   return (
-    <div className={`${styles.boxColor} w-[524px] flex flex-col gap-4 justify-center items-center`}>
+    <div
+      className={`${styles.boxColor} w-[524px] flex flex-col gap-4 justify-center items-center`}
+    >
       <h1 className="font-bold text-[40px] uppercase">
         They say <span className="text-blue-500">creating</span> is an{" "}
         <span className="text-blue-500">addiction —</span> the{" "}
@@ -15,22 +17,29 @@ export default function Work({ children }: { children?: React.ReactNode }) {
       </h1>
 
       <div className="relative flex justify-center items-center  overflow-hidden">
-        <Image src={"/iPad mini.png"} alt="ipad mini" width={1080} height={753} className="w-[410px] h-[286px] select-none" />
+        <Image
+          src={"/iPad mini.png"}
+          alt="ipad mini"
+          width={1080}
+          height={753}
+          className="w-[410px] h-[286px] select-none"
+        />
         <div className="absolute w-[366px] h-60 rounded-md overflow-auto scrollbar-hide">
-            {children ?? <MiniScreen />}
-        </div>        
+          {children ?? <MiniScreen />}
+        </div>
       </div>
 
-      <p className="w-fit content-fill text-gray-400 p-3 rounded-full border border-gray-400"><ArrowUpRight /></p>
-      
+      <p className="w-fit content-fill text-gray-400 p-3 rounded-full border border-gray-400">
+        <ArrowUpRight />
+      </p>
     </div>
   );
 }
 
 function MiniScreen() {
-    return(
-        <div className="p-2 bg-amber-400">
-      <div className="space-y-6 text-gray-800">
+  return (
+    <div className="bg-amber-400">
+      {/* <div className="space-y-6 text-gray-800">
         <div className="mt-4 space-y-4">
           {Array.from({ length: 18 }).map((_, i) => (
             <article key={i} className="p-4 bg-gray-50 rounded-md border">
@@ -42,7 +51,8 @@ function MiniScreen() {
             </article>
           ))}
         </div>
-      </div>
+      </div> */}
+      <Image src='/Hero.jpg' onContextMenu={(e) => {e.preventDefault()} } width={366} height={500} alt='work' className="w-full h-auto"/>
     </div>
-    )
+  );
 }
