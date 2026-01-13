@@ -52,7 +52,7 @@ function MiniScreen() {
           ))}
         </div>
       </div> */}
-      <Image src='/Hero.jpg' onContextMenu={(e) => {e.preventDefault()} } width={366} height={500} alt='work' className="w-full h-auto"/>
+      <Image src='/Hero.jpg' onContextMenu={(e) => {e.preventDefault()}} width={366} height={500} alt='work' className="w-full h-auto"/>
     </div>
   );
 }

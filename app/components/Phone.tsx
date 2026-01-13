@@ -38,12 +38,12 @@ export default function Phone() {
 
 
   return (
-    <div className={`${styles.boxColor} w-[342px] h-[700px] flex flex-col items-center justify-center gap-4`}>
+    <div className={`${styles.boxColor} w-[342px] h-[700px] flex flex-col items-center justify-center gap-4 select-none`}>
         <h1 className='font-bold text-[28px] uppercase'>
             Cooking{".".repeat(dots)}
         </h1>
 
-        <div className='relative flex items-center justify-center'>
+        <div className='relative flex items-center justify-center' onContextMenu={(e) => {e.preventDefault()}}>
 
           <div className='absolute z-20 w-[250px] h-[520px] px-4 pt-10 pb-4 flex flex-col justify-between '>
 

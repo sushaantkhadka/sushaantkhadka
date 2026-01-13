@@ -14,11 +14,6 @@ export default function NavBar() {
     { name: "Reach", link: "/reach" },
   ];
 
-  const handleClick = (link: string) => {
-    // Handle navigation logic here
-    console.log(`Clicked ${link}`);
-  };
-
   return (
     <div className="w-screen space-y-2">
       <h1 className="text-center mv-4 py-3 bg-green-500 font-bold text-white">
@@ -26,10 +21,9 @@ export default function NavBar() {
       </h1>
      
       <div className="flex justify-center items-center">  {/* remove this div later */}
-        <div className="bg-[#F7F7F9] select-none w-fit p-2 flex gap-3 rounded-full border-[0.5px] border-gray-200 shadow-2xl text-gray-300 ">
+        <div className="bg-[#F7F7F9] select-none w-fit p-2 flex gap-3 rounded-full border-[0.5px] border-gray-200 shadow-2xl text-gray-400 ">
           {navLists.map((navList, index) => (
             <Link
-              onClick={() => handleClick(navList.name)}
               href={navList.link}
               key={index}
               className={`${

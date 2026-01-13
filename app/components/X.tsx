@@ -27,10 +27,10 @@ export default function X() {
                   height={150}
                 />
                 <div>
-                  <h1 className="font-bold text-md leading-[19px]">
+                  <h1 className="font-bold text-lg leading-[19px]">
                     Sushant Khadka
                   </h1>
-                  <p className="text-gray-300 text-sm leading-[17px]">
+                  <p className="text-gray-300 text-md font-medium leading-[17px]">
                     @sushaant_khadka
                   </p>
                 </div>
@@ -54,7 +54,7 @@ export default function X() {
         </div>
         <Button className="w-full bg-gray-800 text-white py-3" onMouseOver={changeBackground} asChild>
           <Link href={"https://x.com/sushaant_khadka"} target="_blank">
-            Reed More Tweets <ArrowUpRight />
+            Read More Tweets <ArrowUpRight />
           </Link>
         </Button>
       </div>

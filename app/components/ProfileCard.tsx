@@ -70,7 +70,7 @@ export default function ProfileCard() {
             className="w-24 h-24 rounded-lg object-cover"
           />
           <div className="flex flex-col justify-between">
-            <p className="text-[12px] px-3 border border-gray-400 text-gray-400 rounded-full flex justify-center items-center gap-2">
+            <p className="text-[12px] px-3 border border-gray-400 text-gray-400 rounded-full flex justify-center items-center gap-2 select-none">
               {" "}
               <span className="bg-green-500 w-1.5 h-1.5 rounded-full" />{" "}
               Available To Work
@@ -104,7 +104,7 @@ export default function ProfileCard() {
       </div>
 
       {/* tags  */}
-      <div className="flex flex-wrap gap-1">
+      <div className="flex flex-wrap gap-1 select-none">
         {tags.map((tag, index) => {
           const Icon = tag.icon;
           return (
